@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка Gulp в свой проект</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Установка Gulp в свой проект</h1>
+            <!-- /.header-title -->
+            <div class="line"></div>
+            <!-- /.line -->
+            <p class="section-description">Привет, друг! Пишу этот мануал для себя любимого, чтобы в будущем не тратить время на установку Gulp в свой проект. Ниже подробно опишу каждый из этапов установки. Думаю, что мне будущему это понравится ;)</p>
+            <div class="header-list">
+                <ul>
+                    <li><a href="#nodejs">Установка Node.js</a></li>
+                    <li><a href="#global-gulp">Глобальная установка Gulp</a></li>
+                    <li><a href="#init">Инициализация</a></li>
+                    <li><a href="#commands">Установка пакетов в проект</a></li>
+                    <li><a href="#gulpfile">gulpfile.js</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /.header -->
+    <section class="install-nodejs">
+        <div class="container">
+            <h2 class="section-title" id="nodejs">1. Установка Node.js</h2>
+            <p class="section-description">Для работы с npm-командами необходимо загрузить Node.js на свой компьютер. Загрузка с официальнольного сайта <a href="https://nodejs.org/en/" target="__blank">Node.js</a>. <br><i>Все последующие действия выполняем в терминале из-под папки с нашим проектом!</i></p>
+            <figure>
+                <img class="image-nodejs" src="img/image-nodejs.jpg" alt="#">
+                <figcaption>Официальный сайт Node.js</figcaption>
+            </figure>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.install-nodejs -->
+    <section class="global-install-gulp">
+        <div class="container">
+            <h2 class="section-title" id="global-gulp">2. Глобальная установка Gulp</h2>
+            <p class="section-description">После установки Node.js нам необходимо установить Gulp на наш компьютер. Сперва открываем терминал (cmd.exe) от имени администратора и вводим команду:</p>
+            <div class="code">npm install -g gulp</div>
+            <p class="section-description">Отлично, теперь Gulp есть на нашем компьютере. Приступаем к следующему шагу.</p>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.global-install-gulp -->
+    <section class="init">
+        <div class="container">
+            <h2 class="section-title" id="init">3. Инициализация</h2>
+            <p class="section-description">Теперь нам необходимо прописать следующую команду:</p>
+            <div class="code">npm init</div>
+            <p>После чего терминал нас попросит некоторые данные о проекте, такие как автор, ключевые слова и прочее. Это можно пропуск, нажимая ENTER. Если всё было сделано правильно, то в папке с проектом появится файл "package.json".</p>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.init -->
+    <section class="commands">
+        <div class="container">
+            <h2 class="section-title" id="commands">4. Установка пакетов в проект</h2>
+            <p class="section-description">Чтобы всё работало корректно, необходимо прописать следующие команды:</p>
+            <div class="section-codes">
+                <p class="section-description__code">Gulp собственной персоной</p>
+                <div class="code">npm i --save-dev gulp</div>
+                <p class="section-description__code">BrowserSync, который позволит нам автоматически обновлять страницу при каждом изменении в файлах</p>
+                <div class="code">npm i --save-dev browser-sync</div>
+                <p class="section-description__code">Рекомпилятор из .sass в .css</p>
+                <div class="code">npm i --save-dev gulp-sass</div>
+                <p class="section-description__code">Автопрефиксер</p>
+                <div class="code">npm i --save-dev gulp-autoprefixer</div>
+                <p class="section-description__code">Конкатенация sass-файлов в единый css-файл</p>
+                <div class="code">npm i --save-dev gulp-concat-css</div>
+                <p class="section-description__code">Выгрузка файлов на хостинг. Подробнее его работу и API можно посмотреть <a href="https://www.npmjs.com/package/gulp-ftp" target="__blank">здесь</a>.</p>
+                <div class="code">npm i --save-dev gulp-ftp</div>
+            </div>
+            <p>Отлично, теперь можно переходить в следующему пункту</p>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.commands -->
+    <section class="init">
+        <div class="container">
+            <h2 class="section-title" id="gulpfile">5. gulpfile.js</h2>
+            <p class="section-description">gulpfile.js - главный винец торжества. В нём прописан весь код для работы установленных компонентов. Скачать можно <a href="/files/gulpfile.zip" download>здесь</a>.<br>Его необходимо закинуть в папку с проектом, после чего можно запускать Gulp следующей командой:</p>
+            <div class="code">gulp</div>
+            <p>Теперь можно работать. Наш маленький раб будет делать за нас всю работу, а конкретно: автообновление страницы, рекомпиляция и конкатенация .sass-файлов в .css-файл, автоматическая расстановка префиксов и, по желанию, выгрузка на наш хостинг.</p>
+        </div>
+        <!-- /.container -->
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-logo">akiramiru (c) 2020</p>
+            <div class="footer-links">
+                <div class="footer-links__item1">
+                    <a href="https://vk.com/akiramiru" target="__blank">vk.com</a>
+                </div>
+                <div class="footer-links__item2">
+                    <a href="https://t.me/akiramiru" target="__blank">telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
