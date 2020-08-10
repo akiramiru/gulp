@@ -122,3 +122,48 @@ section {
   border-right: 1px solid #aeaeae;
   padding-right: 7px;
 }
+
+@media (max-width: 750px) {
+  body {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 94%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-list {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .header-title {
+    font-size: 35px;
+  }
+
+  .section-title {
+    margin-bottom: 15px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .section-description__code {
+    font-size: 15px;
+  }
+
+  .image-nodejs {
+    width: 100%;
+  }
+
+  .code {
+    font-size: 16px;
+  }
+}
